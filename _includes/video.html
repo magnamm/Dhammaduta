@@ -1,0 +1,40 @@
+    <!-- video Section -->
+    
+
+    <section id="video" class="container content-section text-center fill col-xs-12 bgdark">
+    <div class="container text-center">
+
+        
+        <div class="row" data-pg-collapsed>
+                <h1>อริยทัศอินเดีย</h1>
+            </div>
+        
+
+        <div class="row" data-pg-collapsed>
+        
+        
+        <div class="text-left">
+            {% for post in site.posts limit: 5 %}
+                {% if forloop.first%} 
+
+                    <div class="col-md-12 text-center">
+                        <h3><a href="{{ post.url }}" class="thumbnail">{{ post.title }}</h3><br>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{ post.link }}?list=PLr8CA-SlIPTRRsSLPZ1_nTOHT9OBxy5iW&amp;controls=0&amp;showinfo=0">
+                            </iframe>
+                        </div></a>
+                    </div>
+
+                {% else %}
+                <div class="col-md-3 text-center">
+                    <a href="{{ post.url }}" class="thumbnail"><img src="http://img.youtube.com/vi/{{ post.link }}/0.jpg" alt="{{ post.title }}" style="max-width:100%;"><br>
+                    {{ post.title }}</a>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        </div>
+    </div>
+
+    </section>

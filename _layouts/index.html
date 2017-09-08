@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    {% include head.html %}
+    <head>
+    	<link href="css/mouseparallax.css" rel="stylesheet" type="text/css">
+
+		<script src="js/jquery-2.2.4.js"></script>
+		<script src="js/mouse.parallax.js"></script>
+
+		    <script src="js/jquery.ripples.js"></script>
+
+		<script src="js/rotate3d.js"></script>
+		<script src="js/3d-falling.js"></script>
+
+    	<style>
+			#background {background-image: url('img/lv9.png');}
+			#foreground1{background-image: url('img/lv8.png');}
+			#foreground2{background-image: url('img/lv7.png');}
+			#foreground3{background-image: url('img/lv6.png');}
+			#foreground4{background-image: url('img/lv5.png');}
+			#foreground5{background-image: url('img/lv4.png');}
+			#foreground6{background-image: url('img/lv3.png');}
+			#foreground7{background-image: url('img/lv2.png');}
+			#foreground8{background-image: url('img/lv1.png');}
+			#foreground9{background-image: url('img/lv0.png');}
+			body{
+				height: 100%;
+				margin: 0px;
+				padding: 0px;
+			}
+			.herologo{
+				padding-top: 30px;
+				width: 100%;
+				/*background-color: pink;*/
+				position: fixed;
+				top: 0px;
+			}
+			.herotext{
+				
+				/*width: 800px;*/
+				/*background: #eee;*/
+				margin: 20% auto;
+			}
+			.herocto{
+				position: fixed;
+				top: 90%;
+				width: 100%;
+				height: 20%;
+				
+			}
+
+		</style>
+
+    </head>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+	<!-- <div id="background" class="mouse-bg"></div> -->
+
+	<script type="text/javascript">
+		var now = new Date();
+		var nowTime = now.getDay();
+
+		var dayTime =  new Date();
+		var brunch =  new Date();
+		var noon =  new Date();
+		var nightTime =  new Date();
+
+		//ตั้งเวลาเริ่มต้นเของช่วงที่ต้องการ
+
+		dayTime.setHours(5);
+		dayTime.setMinutes(1);
+
+		brunch.setHours(8);
+		brunch.setMinutes(1);
+
+		noon.setHours(15);
+		noon.setMinutes(1);
+
+		nightTime.setHours(19);
+		nightTime.setMinutes(1);
+
+		//แสดงภาพตามเวลา
+		if(dayTime<now && brunch > now){
+		document.body.style.background ="#f3f3f3 url('img/1.png') no-repeat center top ";
+		}
+		else if(brunch<now && noon > now){
+		document.body.style.background ="#f3f3f3 url('img/2.png') no-repeat center top ";
+		}
+		else if(noon<now && nightTime > now){
+		document.body.style.background ="#f3f3f3 url('img/3.png') no-repeat center top ";
+		}
+		else {
+		document.body.style.background ="#f3f3f3 url('img/4.png') no-repeat center top ";
+		}
+	</script>
+
+	<div id="foreground1" class="mouse-bg"></div>
+	<div id="foreground2" class="mouse-bg"></div>
+	<div id="foreground3" class="mouse-bg"></div>
+	<div id="foreground4" class="mouse-bg"></div>
+	<div id="foreground5" class="mouse-bg"></div>
+	<div id="foreground6" class="mouse-bg"></div>
+	<div id="foreground7" class="mouse-bg"></div>
+	<div id="foreground8" class="mouse-bg"></div>
+	<div id="foreground9" class="mouse-bg"></div>
+
+	<header class="intro col-xs-12">
+        <!-- <div class="intro-body"> -->
+            <!-- <div class="container"> -->
+				<div class="row text-center herologo" data-pg-collapsed>
+					<img src="img/logo.png" width="10%" />
+				</div>
+                
+                <div class="row herotext">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 >พระธรรมทูตไทย<br class="mob-br">สายประเทศ<br class="mob-br">อินเดีย-เนปาล</h2>
+                        <p class="intro-text">Dhammaduta Bhikkhus Thai <br class="mob-br">Mission in India-Nepal (DTIN)</p>
+                    </div>
+                </div>
+	            <div class="row text-center herocto" data-pg-collapsed>
+					<div class="col-md-12 text-center" style="margin-top: 0px;">
+					    <a href="home/index.html"><button type="button" class="btn btn-default">เข้าสู่เว็บไซต์</button></a>
+					</div>
+				<!-- 
+				<div class="col-md-6 text-center" style="margin-top: 20px">
+				    <a href="#"><button type="button" class="btn btn-default">Enter Site</button></a>
+				</div> -->
+				</div>
+			<!-- </div> -->
+		<!-- </div> -->
+
+    </header>
+
+	
+
+
+	<script> jQuery(document).octoberLeaves() </script>
+
+	<script>
+	$(document).ready(function() {
+		$('#background').mouseParallax({ moveFactor: 0 }); //0
+		$('#foreground1').mouseParallax({ moveFactor: 0 }); //3 0
+		$('#foreground2').mouseParallax({ moveFactor: 0 }); //4 0
+		$('#foreground3').mouseParallax({ moveFactor: 0 }); //5 0
+		$('#foreground4').mouseParallax({ moveFactor: 0 }); //6 0
+		$('#foreground5').mouseParallax({ moveFactor: 0 }); //7 0
+		$('#foreground6').mouseParallax({ moveFactor: 1 }); //8 1
+		$('#foreground7').mouseParallax({ moveFactor: 3 }); //10 3
+		$('#foreground8').mouseParallax({ moveFactor: 4 }); //11 4
+		$('#foreground9').mouseParallax({ moveFactor: 5 }); //12 5
+		// $('body').height(3000);
+	});
+
+	</script>
+
+
+
+
+    </body>
+</html>

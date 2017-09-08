@@ -1,0 +1,42 @@
+---
+layout: single
+---
+
+
+        <!-- video Section -->
+    
+
+    <section id="video" class="container content-section text-center fill col-xs-12 bgdark">
+        <div class="container text-center">
+            {% for post in site.posts %}
+                {% if forloop.first%} 
+
+                    <div class="col-md-12 text-center">
+                        <h3><a href="{{ post.url }}" class="thumbnail">{{ post.title }}</h3><br>
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{ post.link }}?list=PLr8CA-SlIPTRRsSLPZ1_nTOHT9OBxy5iW&amp;controls=0&amp;showinfo=0">
+                            </iframe>
+                        </div></a>
+                    </div>
+                {% endif %}
+                
+                <div class="col-md-12 text-center">
+                <div class="col-md-3 col-md-offset-4 text-center">
+                    <a href="{{ post.url }}" class="thumbnail">
+                        <img src="http://img.youtube.com/vi/{{ post.link }}/0.jpg" alt="{{ post.title }}" style="max-width:100%;">
+                    </a>
+                </div>
+
+                <div class="col-md-5 text-center">
+                    <a href="{{ post.url }}"><h3>{{ post.title }}</h3>
+                    {{post.date | date_to_long_string}}<br><br>
+                    <button type="button" class="btn btn-default"> ดูรายการย้อนหลัง </button></a>
+                </div>
+                </div>
+                
+            {% endfor %}
+
+            
+            
+        </div>
+    </section>

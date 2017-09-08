@@ -1,0 +1,35 @@
+/* 
+Mouse Parallax
+==============
+This is just initialization so that your background area is not hidden on page load.  Apply this class to elements you will use with $(element).mouseParallax();  
+
+Or not!  You can use mouseParallax on an element without this class and specify all the styles yourself, if you prefer.
+
+I went with "fixed," but "absolute" positioning also works, depending on the application.
+*/
+
+body, html {
+height: 100%;
+}
+
+.mouse-bg {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	position: fixed;
+	z-index: -1;
+
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.october-leaf {
+position: absolute;
+background-color: transparent;
+background-image: url('../img/leaves.png');
+-webkit-transform: translateZ(0);
+-moz-transform: translateZ(0);
+transform: translateZ(0);
+}

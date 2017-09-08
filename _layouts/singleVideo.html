@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+    <style type="text/css">
+        .video-bg{
+          display: block;
+          position: relative;
+        }
+
+        .video-bg::after{
+            content: "";
+            background: url('http://img.youtube.com/vi/{{ page.link }}/0.jpg') fixed;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.5;
+            filter: blur(10px);
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;  
+        }
+
+    </style>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    {% include sing_nav.html %}
+
+    <header class="intro col-xs-12">
+        <div class="intro-body fill bgdim video-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="http://www.youtube.com/embed/{{ page.link }}?list=PLr8CA-SlIPTRRsSLPZ1_nTOHT9OBxy5iW&amp;controls=0&amp;showinfo=0"></iframe>
+                    </div>
+                        <!-- <h2 >{{page.title}}</h2>
+                        <a href="#story" class="btn btn-circle page-scroll">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+	<br>
+	<p> </p>
+    <content>
+    	<div class="container text-center">
+    		<div class="col-md-offset-1 col-md-7" id="story">
+    			<br>
+    			<h2 >{{page.title}}</h2>
+                    <!-- <a href="http://www.youtube.com/watch?v={{ page.link }}" data-toggle="lightbox"><img src="http://img.youtube.com/vi/{{ page.link }}/0.jpg" alt="Image" style="max-width:100%;" /><br>คลิกเพื่อชม</a> -->
+                    
+			    <br>
+			    <!-- <p class="intro-text">{{page.link}}</p> -->
+
+
+    			{{ page.content }}
+
+                <div class="share-page">
+                    แบ่งปันเรื่องราวนี้  &rarr; 
+                    <button type="button" class="btn btn-default">
+                    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="แบ่งปันเรื่องราวนี้  Twitter">Twitter</a></button>
+
+                    <button type="button" class="btn btn-default">
+                    <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="แบ่งปันเรื่องราวนี้  Facebook">Facebook</a></button>
+
+                    <button type="button" class="btn btn-default">
+                    <a href="https://plus.google.com/share?url={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="แบ่งปันเรื่องราวนี้  Google+">Google+</a></button>
+
+                    <button type="button" class="btn btn-default">
+                    <a href="http://line.me/R/msg/text/{{ site.url }}{{ page.url }}"  rel="nofollow" target="_blank" title="แบ่งปันเรื่องราวนี้  Line">Line</a></button>
+                </div>
+    			
+    		</div>
+
+
+    		<div class="col-md-3 hidden-sm"> 
+    			<br>
+                <p>ชมรายการย้อนหลัง</p>
+    			<ul class="text-center" style="list-style: none;">
+					{% for post in site.posts limit: 5 %}
+						<li>
+                            <a href="{{ post.url }}"  class="thumbnail">
+                            <img src="http://img.youtube.com/vi/{{ post.link }}/1.jpg"  style="max-width:100%;"><br>
+							{{ post.title }}</a>
+						</li>
+					{% endfor %}
+				</ul>
+				
+
+				
+    		</div>
+    	</div>
+
+    </content>
+
+
+
+    
+    
+
+    {% include sing_footer.html %}
+    {% include js.html %}
+    </script>
+
+
+    </body>
+</html>

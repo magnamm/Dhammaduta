@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+    <header>
+        <style type="text/css">
+        body{
+            /*display: table;*/
+            width: 100%;
+            color: #fff;
+            background: url(/img/intro-bg.jpg) no-repeat  center fixed;
+            background-size: cover;
+            
+        }
+
+        </style>
+    </header>
+    <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    {% include nav.html %}
+    {% include indexhero.html %}
+    {% include history.html %}
+    {% include story.html %}
+    {% include video.html %}
+    {% include mission.html %}
+    
+    {% include network.html %}
+    {% include contact.html %}
+    {% include footer.html %}
+
+    {% include js.html %}
+
+    </body>
+</html>

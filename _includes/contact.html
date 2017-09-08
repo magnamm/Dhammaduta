@@ -1,0 +1,26 @@
+    <!-- contact Section -->
+    <section id="contact" class="container content-section text-center fill col-xs-12 bgdim">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>ติดต่อ</h2>
+                <p>พระธรรมทูตไทยสายประเทศอินเดีย-เนปาล<br>
+                <span class="hidden-xs">วัดไทยพุทธคยา<br>
+                สำนักงานใหญ่ พระธรรมทูตไทยสายอินเดีย-เนปาล<br></span>
+                วัดไทยพุทธคยา ตำบลโพธิคยา อำเภอคยา จังหวัดปัตตะนะ รัฐพิหาร สาธารณรัฐอินเดีย<br><br class="mob-br">
+                <span class="hidden-xs">Email:</span> watthaibuddhagaya935@gmail.com <br>
+                <span class="hidden-xs">Email:</span> hand84000@gmail.com<br><br class="mob-br">
+                Tel: (+91)-91-9965-3333, <br class="mob-br">(+91)-77-6400-0959, <br class="mob-br">(+91)-80-0279-3888
+                </p>
+                <a href="{{ "/contact"| prepend: site.baseurl }}"><button class="btn btn-default"> ข้อมูลติดต่อเพิ่มเติม</button></a>
+                <p><br class="mob-br"><a href="mailto:{{ site.email }}">{{ site.email }}</a>
+                </p>
+                <ul class="list-inline banner-social-buttons">
+                    {% for network in site.social %}
+                    <li>
+                        <a href="{{ network.url }}" class="btn btn-default btn-lg"><i class="fa fa-{{ network.title }} fa-fw"></i> <span class="network-name">{{ network.title }}</span></a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </section>

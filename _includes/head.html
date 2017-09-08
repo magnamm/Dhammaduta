@@ -1,0 +1,53 @@
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/4.0.1/ekko-lightbox.js"></script>
+
+    <!-- Custom Fonts -->
+    <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+    <link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <link href='https://fonts.googleapis.com/css?family=Athiti&subset=thai' rel='stylesheet' type='text/css'>
+
+    
+    <!-- Add jQuery library -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="{{/js/fancybox/lib/jquery.mousewheel-3.0.6.pack.js| prepend: site.baseurl }}"></script>
+
+<!-- Add fancyBox -->
+<link rel="stylesheet" href="{{/js/fancybox/source/jquery.fancybox.css?v=2.1.5| prepend: site.baseurl }}" type="text/css" media="screen" />
+<script type="text/javascript" src="{{/js/fancybox/source/jquery.fancybox.pack.js?v=2.1.5| prepend: site.baseurl }}"></script>
+
+<!-- Optionally add helpers - button, thumbnail and/or media -->
+<link rel="stylesheet" href="{{/js/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5| prepend: site.baseurl }}" type="text/css" media="screen" />
+<script type="text/javascript" src="{{/js/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5| prepend: site.baseurl }}"></script>
+<script type="text/javascript" src="{{/js/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6| prepend: site.baseurl }}"></script>
+
+<link rel="stylesheet" href="{{/js/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7| prepend: site.baseurl }}" type="text/css" media="screen" />
+<script type="text/javascript" src="{{/js/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7| prepend: site.baseurl }}"></script>
+
+
+
+
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
